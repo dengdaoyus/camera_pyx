@@ -1,10 +1,18 @@
 [
     {
+        "merged": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\camerasdk_icon_camera.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\camerasdk_icon_camera.png"
+    },
+    {
         "merged": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\default_check.png",
         "source": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\default_check.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\camerasdk_icon_camera.png",
         "source": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\camerasdk_icon_camera.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\default_check.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\default_check.png"
     }
 ]

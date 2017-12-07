@@ -20,6 +20,12 @@ public class PyxCamera implements LuBanSDK.LuBanImageFace {
     private CameraImageCallBack cameraImageCallBack;
 
 
+    /**
+     *
+     * @param activity
+     * @param cameraSdkParameterInfo 选择图片参数
+     * @param cameraImageCallBack 图片回调
+     */
     public PyxCamera(Activity activity, CameraSdkParameterInfo cameraSdkParameterInfo, CameraImageCallBack cameraImageCallBack) {
         this.activity = activity;
         this.cameraSdkParameterInfo = cameraSdkParameterInfo;
@@ -38,7 +44,11 @@ public class PyxCamera implements LuBanSDK.LuBanImageFace {
     }
 
 
-    //图片预览
+    /**
+     *
+     * @param activity
+     * @param position 展示第几个图片
+     */
     public void openImagePreview(Activity activity, int position) {
         cameraSdkParameterInfo.setPosition(position);
         Bundle b = new Bundle();

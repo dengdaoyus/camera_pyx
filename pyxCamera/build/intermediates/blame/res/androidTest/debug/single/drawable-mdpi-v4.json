@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\ic_launcher.png"
     }

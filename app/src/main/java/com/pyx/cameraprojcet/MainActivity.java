@@ -36,10 +36,11 @@ public class MainActivity extends AppCompatActivity implements PyxCamera.CameraI
             }
         });
 
-        //四、图片浏览
+
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //四、图片浏览
                 pyxCamera.openImagePreview(MainActivity.this, 0);
             }
         });
