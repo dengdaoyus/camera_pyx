@@ -3,8 +3,9 @@
 ```java
 
 
-    //设置参数
-    CameraSdkParameterInfo info;
+    	//设置参数
+  	CameraSdkParameterInfo info;
+	
 	public boolean is_net_path=false;		//是否来自网络默认为否
 	private int ret_type=0;			        //返回类型(0:返回生成的图片路径 1:返回生成的Bitmap)    默认为0
 	private int max_image = 9;			//最大图片选择数，int类型，默认9
