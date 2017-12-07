@@ -1,5 +1,5 @@
 # camera_pyx
-一款基于cameraSDK上添加了鲁班算法的图片框架
+(仿微信选择图片带压缩)一款基于cameraSDK上添加了鲁班算法的图片框架
 ```java
 
     /**
@@ -17,15 +17,29 @@
         super.onActivityResult(requestCode, resultCode, data);
         pyxCamera.onActivityCameraResult(requestCode, resultCode, data);
     }
-   
-    //三、打开自定义相册，选择图片
-    pyxCamera.openPhotoPick(MainActivity.this);
+    
+     //三、打开自定义相册，选择图片
+     button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pyxCamera.openPhotoPick(MainActivity.this);
+            }
+        });
+        
+    
     
      /**
      * 
      * @param activity
      * @param position 展示第几个图片
      */
+     
     //四、图片浏览(选择性使用，可以用自己写的)
-    pyxCamera.openImagePreview(MainActivity.this, 0);
+    imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //四、图片浏览
+                pyxCamera.openImagePreview(MainActivity.this, 0);
+            }
+        });
 
