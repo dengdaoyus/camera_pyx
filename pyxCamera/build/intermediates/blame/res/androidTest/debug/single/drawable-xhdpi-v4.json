@@ -8,12 +8,12 @@
         "source": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\camerasdk_icon_cropper_x.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\camerasdk_icon_cropper_button_crop_pressed.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\camerasdk_icon_cropper_button_crop_pressed.png"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\crop_img_sma.png",
         "source": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\crop_img_sma.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\camerasdk_icon_cropper_button_crop_pressed.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\camerasdk_icon_cropper_button_crop_pressed.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\camerasdk_icon_crop_one_one_h.png",

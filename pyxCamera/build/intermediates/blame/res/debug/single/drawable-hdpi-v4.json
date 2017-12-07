@@ -1,27 +1,27 @@
 [
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\camerasdk_marker1.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\src\\main\\res\\drawable-hdpi\\camerasdk_marker1.png"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\camera_library.png",
         "source": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\src\\main\\res\\drawable-hdpi\\camera_library.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\camerasdk_icon_edit_button_saturationnormal.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\src\\main\\res\\drawable-hdpi\\camerasdk_icon_edit_button_saturationnormal.png"
+        "merged": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\camerasdk_marker1.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\src\\main\\res\\drawable-hdpi\\camerasdk_marker1.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\camerasdk_marker1.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\src\\main\\res\\drawable-hdpi\\camerasdk_marker1.png"
+        "merged": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\camera_flash_on.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\src\\main\\res\\drawable-hdpi\\camera_flash_on.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\camera_trigger.png",
         "source": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\src\\main\\res\\drawable-hdpi\\camera_trigger.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\camera_flash_on.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\src\\main\\res\\drawable-hdpi\\camera_flash_on.png"
+        "merged": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\camerasdk_marker1.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\src\\main\\res\\drawable-hdpi\\camerasdk_marker1.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\camerasdk_icon_edit_button_saturationnormal.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\src\\main\\res\\drawable-hdpi\\camerasdk_icon_edit_button_saturationnormal.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\camerasdk_icon_place.png",
@@ -68,12 +68,12 @@
         "source": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\src\\main\\res\\drawable-hdpi\\camerasdk_brand_tag_point_black_bg.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\camerasdk_icon_edit_contrast_pressed.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\src\\main\\res\\drawable-hdpi\\camerasdk_icon_edit_contrast_pressed.png"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\camerasdk_crayon.png",
         "source": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\src\\main\\res\\drawable-hdpi\\camerasdk_crayon.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\camerasdk_icon_edit_contrast_pressed.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\src\\main\\res\\drawable-hdpi\\camerasdk_icon_edit_contrast_pressed.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\camerasdk_icon_edit_contrast_normal.png",
