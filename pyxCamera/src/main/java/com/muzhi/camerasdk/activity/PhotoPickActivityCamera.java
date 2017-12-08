@@ -86,7 +86,7 @@ public class PhotoPickActivityCamera extends CameraBaseActivity {
         instance = this;
 
 		/*int resId=MResource.getIdByName(this,MResource.layout, "camerasdk_activity_main");
-		if (resId > 0) {
+        if (resId > 0) {
 			setContentView(resId);
 		}*/
 
