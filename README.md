@@ -1,7 +1,7 @@
 # camera_pyx
 图片多选、单选、框架，使用简单，UI 可以定制
 
-![image](camera_pyx/Gif/device-2017-12-11-142814_0-515.gif)   
+![image](https://github.com/Mypyx/camera_pyx/raw/master/Gif/device-2017-12-11-142814_0-515.gif)   
 
 ```java
 
