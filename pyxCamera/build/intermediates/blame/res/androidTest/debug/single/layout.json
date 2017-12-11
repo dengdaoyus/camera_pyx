@@ -44,12 +44,12 @@
         "source": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_loading.xml"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_activity_sticker.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_activity_sticker.xml"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_view_tags.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_view_tags.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_activity_sticker.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_activity_sticker.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_list_item_preview_image.xml",

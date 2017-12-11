@@ -82,20 +82,11 @@ public class PhotoPickActivityCamera extends CameraBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.camerasdk_activity_main);
-
         instance = this;
-
-		/*int resId=MResource.getIdByName(this,MResource.layout, "camerasdk_activity_main");
-        if (resId > 0) {
-			setContentView(resId);
-		}*/
-
         initExtra();
         initViews();
         initEvent();
         getSupportLoaderManager().restartLoader(LOADER_ALL, null, mLoaderCallback);
-
-
     }
 
     //获取传过来的参数
@@ -197,11 +188,7 @@ public class PhotoPickActivityCamera extends CameraBaseActivity {
             @Override
             @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
             public void onGlobalLayout() {
-
                 final int width = mGridView.getWidth();
-                final int height = mGridView.getHeight();
-                // mGridWidth = width;
-                // mGridHeight = height;
                 final int desireSize = getResources().getDimensionPixelOffset(R.dimen.image_size);
                 final int numCount = width / desireSize;
                 final int columnSpace = getResources().getDimensionPixelOffset(R.dimen.space_size);
@@ -280,8 +267,6 @@ public class PhotoPickActivityCamera extends CameraBaseActivity {
                     } else {
                         resultList.add(mTmpFile.getPath());
                     }
-
-                    //selectComplate();
                 }
             } else {
                 if (mTmpFile != null && mTmpFile.exists()) {

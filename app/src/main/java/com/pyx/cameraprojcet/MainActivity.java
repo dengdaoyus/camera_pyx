@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements PyxCamera.CameraI
             @Override
             public void onClick(View view) {
                 //三、打开自定义相册，选择图片
-                pyxCamera.openPhotoPick(MainActivity.this);
+                pyxCamera.openCameraSdk();
             }
         });
 
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements PyxCamera.CameraI
     //一、实例化对象
     private void initCamera() {
         info = new CameraSdkParameterInfo();
-        info.setMax_image(2);
+        info.setSingle_mode(true);
         pyxCamera = new PyxCamera(this, info, this);
     }
 
