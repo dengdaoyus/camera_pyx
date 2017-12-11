@@ -35,9 +35,8 @@ public class MainActivity extends AppCompatActivity implements PyxCamera.CameraI
     //一、实例化对象设置info对象设置SDK参数及UI
     private void initCamera() {
         info = new CameraSdkParameterInfo();
-        info.setMaxImage(6);
-        info.setSingleMode(false);
-        info.setCutoutImage(false);
+        info.setSingleMode(true);
+        info.setCutoutImage(true);
         pyxCamera = new PyxCamera(this, info, this);
     }
 

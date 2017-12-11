@@ -16,9 +16,6 @@
 
     <application android:allowBackup="true" >
         <activity
-            android:name="com.muzhi.camerasdk.activity.CameraActivityCamera"
-            android:screenOrientation="portrait" />
-        <activity
             android:name="com.muzhi.camerasdk.activity.PhotoPickActivityCamera"
             android:screenOrientation="portrait" />
         <activity

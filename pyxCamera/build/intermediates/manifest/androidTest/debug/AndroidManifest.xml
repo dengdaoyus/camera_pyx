@@ -25,9 +25,6 @@
         <uses-library android:name="android.test.runner" />
 
         <activity
-            android:name="com.muzhi.camerasdk.activity.CameraActivityCamera"
-            android:screenOrientation="portrait" />
-        <activity
             android:name="com.muzhi.camerasdk.activity.PhotoPickActivityCamera"
             android:screenOrientation="portrait" />
         <activity
