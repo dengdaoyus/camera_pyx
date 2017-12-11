@@ -15,8 +15,8 @@
               }
 	      
 	      
-	 //添加依赖
-	       compile 'com.github.Mypyx:camera_pyx:pyx_1.0.1'
+		 //添加依赖
+	      compile 'com.github.Mypyx:camera_pyx:pyx_1.0.2'
 	      
 
 ====================================================Parameter======================================================
