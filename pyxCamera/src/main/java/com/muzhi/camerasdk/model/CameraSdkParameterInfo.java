@@ -17,6 +17,7 @@ public class CameraSdkParameterInfo implements Serializable {
     public static final int TAKE_PICTURE_FROM_CAMERA = 100;
     public static final int TAKE_PICTURE_FROM_GALLERY = 200;
     public static final int TAKE_PICTURE_PREVIEW = 300;
+    public static final int TAKE_PICTURE_SINGLE_CAMERA = 400;
 
 
     //设置参数

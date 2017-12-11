@@ -70,6 +70,13 @@
     <string name="camerasdk_tab_filter">特效</string>
     <string name="camerasdk_tab_graffiti">涂鸦</string>
     <string name="camerasdk_tab_sticker">贴纸</string>
+    <style name="MyNewAlertDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
     <style name="camerasdk_radio_button">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

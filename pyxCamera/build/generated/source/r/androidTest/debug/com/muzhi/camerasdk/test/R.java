@@ -497,10 +497,12 @@ containing a value of this type.
         public static final int default_check_s=0x7f020055;
         public static final int dialog_example=0x7f020056;
         public static final int filter_example_icon=0x7f020057;
-        public static final int ic_launcher=0x7f020058;
-        public static final int message_popover_arrow=0x7f020059;
-        public static final int new_icon=0x7f02005a;
-        public static final int statusdetail_comment_top_arrow=0x7f02005b;
+        public static final int ic_camera=0x7f020058;
+        public static final int ic_launcher=0x7f020059;
+        public static final int ic_photo=0x7f02005a;
+        public static final int message_popover_arrow=0x7f02005b;
+        public static final int new_icon=0x7f02005c;
+        public static final int statusdetail_comment_top_arrow=0x7f02005d;
     }
     public static final class id {
         public static final int back=0x7f0a0018;
@@ -541,6 +543,8 @@ containing a value of this type.
         public static final int cropImageView=0x7f0a0026;
         public static final int crop_img=0x7f0a0024;
         public static final int cropimage=0x7f0a0021;
+        public static final int dialog_camera=0x7f0a006f;
+        public static final int dialog_photo=0x7f0a0070;
         public static final int drawLayout=0x7f0a003c;
         public static final int drawView=0x7f0a003d;
         public static final int effect_img=0x7f0a004d;
@@ -642,6 +646,7 @@ containing a value of this type.
         public static final int camerasdk_view_tag_left=0x7f030017;
         public static final int camerasdk_view_tag_right=0x7f030018;
         public static final int camerasdk_view_tags=0x7f030019;
+        public static final int dialog_select_camera=0x7f03001a;
     }
     public static final class raw {
         public static final int tone_cuver_sample=0x7f050000;
@@ -666,8 +671,9 @@ containing a value of this type.
         public static final int camerasdk_tab_sticker=0x7f080010;
     }
     public static final class style {
-        public static final int camerasdk_radio_button=0x7f090000;
-        public static final int camerasdk_tab_text=0x7f090001;
+        public static final int MyNewAlertDialog=0x7f090000;
+        public static final int camerasdk_radio_button=0x7f090001;
+        public static final int camerasdk_tab_text=0x7f090002;
     }
     public static final class styleable {
         /** Attributes that can be used with a CameraSDKPagerSlidingTabStrip.

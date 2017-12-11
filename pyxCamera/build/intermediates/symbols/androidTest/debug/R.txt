@@ -162,10 +162,12 @@ int drawable default_check 0x7f020054
 int drawable default_check_s 0x7f020055
 int drawable dialog_example 0x7f020056
 int drawable filter_example_icon 0x7f020057
-int drawable ic_launcher 0x7f020058
-int drawable message_popover_arrow 0x7f020059
-int drawable new_icon 0x7f02005a
-int drawable statusdetail_comment_top_arrow 0x7f02005b
+int drawable ic_camera 0x7f020058
+int drawable ic_launcher 0x7f020059
+int drawable ic_photo 0x7f02005a
+int drawable message_popover_arrow 0x7f02005b
+int drawable new_icon 0x7f02005c
+int drawable statusdetail_comment_top_arrow 0x7f02005d
 int id back 0x7f0a0018
 int id backImage 0x7f0a006d
 int id bar 0x7f0a0022
@@ -204,6 +206,8 @@ int id cover 0x7f0a0055
 int id cropImageView 0x7f0a0026
 int id crop_img 0x7f0a0024
 int id cropimage 0x7f0a0021
+int id dialog_camera 0x7f0a006f
+int id dialog_photo 0x7f0a0070
 int id drawLayout 0x7f0a003c
 int id drawView 0x7f0a003d
 int id effect_img 0x7f0a004d
@@ -303,6 +307,7 @@ int layout camerasdk_popup_folder 0x7f030016
 int layout camerasdk_view_tag_left 0x7f030017
 int layout camerasdk_view_tag_right 0x7f030018
 int layout camerasdk_view_tags 0x7f030019
+int layout dialog_select_camera 0x7f03001a
 int raw tone_cuver_sample 0x7f050000
 int string app_name 0x7f080000
 int string camerasdk_album 0x7f080001
@@ -321,8 +326,9 @@ int string camerasdk_tab_enhance 0x7f08000d
 int string camerasdk_tab_filter 0x7f08000e
 int string camerasdk_tab_graffiti 0x7f08000f
 int string camerasdk_tab_sticker 0x7f080010
-int style camerasdk_radio_button 0x7f090000
-int style camerasdk_tab_text 0x7f090001
+int style MyNewAlertDialog 0x7f090000
+int style camerasdk_radio_button 0x7f090001
+int style camerasdk_tab_text 0x7f090002
 int[] styleable CameraSDKPagerSlidingTabStrip { 0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009, 0x7f01000a }
 int styleable CameraSDKPagerSlidingTabStrip_camerasdk_pstsDividerColor 2
 int styleable CameraSDKPagerSlidingTabStrip_camerasdk_pstsDividerPadding 5

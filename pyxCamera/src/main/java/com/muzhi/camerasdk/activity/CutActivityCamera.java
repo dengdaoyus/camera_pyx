@@ -17,7 +17,10 @@ import com.muzhi.camerasdk.R;
 import com.muzhi.camerasdk.library.utils.PhotoUtils;
 import com.muzhi.camerasdk.model.CameraSdkParameterInfo;
 import com.muzhi.camerasdk.model.Constants;
+import com.muzhi.camerasdk.model.CutCameraResult;
 import com.muzhi.camerasdk.view.CropImageView;
+
+import org.greenrobot.eventbus.EventBus;
 
 
 public class CutActivityCamera extends CameraBaseActivity {
@@ -37,8 +40,14 @@ public class CutActivityCamera extends CameraBaseActivity {
         public void handleMessage(Message msg) {
             progressDialog.dismiss();
             String path = PhotoUtils.saveAsBitmap(mContext, mCropView.getCroppedBitmap());
-            PhotoPickActivityCamera.instance.getForResultComplate(path);
+            if (parameterInfo.isSingle_mode() && parameterInfo.isCroper_image()) {
+                EventBus.getDefault().post(new CutCameraResult(path));
+            } else {
+                PhotoPickActivityCamera.instance.getForResultComplate(path);
+            }
             finish();
+            if (PhotoPickActivityCamera.instance != null)
+                PhotoPickActivityCamera.instance.finish();
         }
     };
 

@@ -8,6 +8,10 @@
         "source": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\src\\main\\res\\layout\\camerasdk_activity_graffiti.xml"
     },
     {
+        "merged": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_select_camera.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\camera_pyx\\pyxCamera\\src\\main\\res\\layout\\dialog_select_camera.xml"
+    },
+    {
         "merged": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\build\\intermediates\\res\\merged\\debug\\layout\\camerasdk_activity_graffiti.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\CameraProjcet\\pyxCamera\\src\\main\\res\\layout\\camerasdk_activity_graffiti.xml"
     },

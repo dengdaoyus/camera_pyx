@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements PyxCamera.CameraI
     private void initCamera() {
         info = new CameraSdkParameterInfo();
         info.setSingle_mode(true);
+        info.setCroper_image(true);
         pyxCamera = new PyxCamera(this, info, this);
     }
 
