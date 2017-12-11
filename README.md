@@ -1,5 +1,7 @@
 # camera_pyx
 图片多选、单选、框架，使用简单，UI 可以定制
+![image](https://github.com/Mypyx/camera_pyx/Gif/device-2017-12-11-142814_0-515.gif)   
+
 ```java
 
 ====================================================依赖添加=======================================================	
@@ -23,6 +25,8 @@
     private boolean singleMode = false;
     //正方形的裁剪图片必须与单张相结合
     private boolean cutoutImage = false;
+    //是否打开dialog选中相机、相册对话框
+    private boolean isOpenDialog = true;
     //是否显示相机，默认显示
     private boolean showCamera = true;
     //在预览时带的下标，也可作为标识使用
@@ -37,6 +41,20 @@
     private String titleName;
     //设置标题颜色
     private int titleColor;
+    //设置标题字体大小
+    private int textSize;
+    //设置完成按钮的背景颜色
+    private int completeColor;
+    //设置完成按钮的文本
+    private String completeText;
+    //设置完成按钮的文本大小
+    private int completeTextSize;
+    //设置取消的文本
+    private String cancelText;
+    //设置取消的 字体颜色
+    private int cancelColor;
+    //设置取消的 字体大小
+    private int cancelTextSize;
 
 
 =====================================================使用步骤===========================================================
