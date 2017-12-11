@@ -28,42 +28,52 @@ public class MainActivity extends AppCompatActivity implements PyxCamera.CameraI
         imageView = (ImageView) findViewById(R.id.image);
         button = (Button) findViewById(R.id.image_btn);
         initCamera();
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //三、打开自定义相册，选择图片
-                pyxCamera.openCameraSdk();
-            }
-        });
-
-
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //四、图片浏览
-                pyxCamera.openImagePreview(MainActivity.this, 0);
-            }
-        });
+        setBtnOnClick();
+        setImageOnClick();
     }
 
-    //一、实例化对象
+    //一、实例化对象设置info对象设置SDK参数及UI
     private void initCamera() {
         info = new CameraSdkParameterInfo();
-        info.setSingle_mode(true);
-        info.setCroper_image(true);
+        //设置单选模式
+        info.setSingleMode(true);
+        //打开图片剪裁
+        info.setCutoutImage(true);
         pyxCamera = new PyxCamera(this, info, this);
     }
 
-    @Override
-    public void returnImageList(ArrayList<String> list, String oneImage) {
-        Glide.with(this).load(oneImage).into(imageView);
-    }
 
     //二、重写回调方法
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         pyxCamera.onActivityCameraResult(requestCode, resultCode, data);
+    }
+
+    //三、打开自定义相册，选择图片
+    private void setBtnOnClick() {
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pyxCamera.openCameraSdk();
+            }
+        });
+    }
+
+    //四、图片浏览(可选择性使用)
+    private void setImageOnClick() {
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pyxCamera.openImagePreview(MainActivity.this, 0);
+            }
+        });
+    }
+
+
+    @Override
+    public void returnImageList(ArrayList<String> list, String oneImage) {
+        Glide.with(this).load(oneImage).into(imageView);
     }
 
     @Override

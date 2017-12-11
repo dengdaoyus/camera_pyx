@@ -1,17 +1,17 @@
 package com.muzhi.camerasdk.adapter;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
-import com.muzhi.camerasdk.R;
-import com.muzhi.camerasdk.library.utils.ViewHolder;
-import com.muzhi.camerasdk.model.ImageInfo;
-import com.squareup.picasso.Picasso;
-
 import android.content.Context;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
+import com.muzhi.camerasdk.R;
+import com.muzhi.camerasdk.library.utils.ViewHolder;
+import com.muzhi.camerasdk.model.ImageInfo;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 特效页顶部小图片
@@ -53,10 +53,10 @@ public class SmallThumbAdapter extends CommonListAdapter<ImageInfo>{
 		String path= info.path;
 		int mItemSize=90;
 		File imageFile = new File(path);
-		Picasso.with(mContext)
+		Glide.with(mContext)
 		.load(imageFile)
 		.error(R.drawable.camerasdk_pic_loading)
-		.resize(mItemSize, mItemSize)
+		.override(mItemSize, mItemSize)
         .centerCrop()
 		.into(img);
 		

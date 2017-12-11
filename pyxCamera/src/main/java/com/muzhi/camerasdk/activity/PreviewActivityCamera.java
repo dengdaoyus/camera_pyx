@@ -60,7 +60,7 @@ public class PreviewActivityCamera extends CameraBaseActivity {
         Bundle b = getIntent().getExtras();
         if (b != null) {
             mCameraSdkParameterInfo = (CameraSdkParameterInfo) b.getSerializable(CameraSdkParameterInfo.EXTRA_PARAMETER);
-            resultList = mCameraSdkParameterInfo.getImage_list();
+            resultList = mCameraSdkParameterInfo.getImageList();
             position = mCameraSdkParameterInfo.getPosition();
             if (resultList != null && resultList.size() > 1) {
                 setActionBarTitle(title + "(" + (position + 1) + "/" + resultList.size() + ")");

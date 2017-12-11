@@ -40,7 +40,7 @@ public class CutActivityCamera extends CameraBaseActivity {
         public void handleMessage(Message msg) {
             progressDialog.dismiss();
             String path = PhotoUtils.saveAsBitmap(mContext, mCropView.getCroppedBitmap());
-            if (parameterInfo.isSingle_mode() && parameterInfo.isCroper_image()) {
+            if (parameterInfo.isSingleMode() && parameterInfo.isCutoutImage()) {
                 EventBus.getDefault().post(new CutCameraResult(path));
             } else {
                 PhotoPickActivityCamera.instance.getForResultComplate(path);
@@ -65,7 +65,7 @@ public class CutActivityCamera extends CameraBaseActivity {
         } catch (Exception e) {
         }
         if (parameterInfo != null) {
-            sourceMap = PhotoUtils.getBitmap(parameterInfo.getImage_list().get(0));
+            sourceMap = PhotoUtils.getBitmap(parameterInfo.getImageList().get(0));
             mCropView.setImageBitmap(sourceMap);
         } else {
             sourceMap = Constants.bitmap;

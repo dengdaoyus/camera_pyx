@@ -44,7 +44,7 @@ public class PyxCamera implements LuBanSDK.LuBanImageFace, SelectCameraDialog.Se
     }
 
     public void openCameraSdk() {
-        if (cameraSdkParameterInfo.isSingle_mode() && cameraSdkParameterInfo.isCroper_image()) {
+        if (cameraSdkParameterInfo.isSingleMode() && cameraSdkParameterInfo.isCutoutImage()) {
             selectCameraDialog.showDialog();
         } else {
             openPhotoPick();
@@ -112,14 +112,14 @@ public class PyxCamera implements LuBanSDK.LuBanImageFace, SelectCameraDialog.Se
         }
         int position = data.getIntExtra("position", -1);
         cameraImageCallBack.deleteItem(position);
-        cameraSdkParameterInfo.getImage_list().remove(position);
+        cameraSdkParameterInfo.getImageList().remove(position);
     }
 
 
     private void setSingleModeResult() {
-        if (cameraSdkParameterInfo.isSingle_mode()) {
-            cameraSdkParameterInfo.getImage_list().clear();
-            cameraSdkParameterInfo.getImage_list().add(mTmpFile.getPath());
+        if (cameraSdkParameterInfo.isSingleMode()) {
+            cameraSdkParameterInfo.getImageList().clear();
+            cameraSdkParameterInfo.getImageList().add(mTmpFile.getPath());
             stateCutActivity();
         }
     }
@@ -137,9 +137,9 @@ public class PyxCamera implements LuBanSDK.LuBanImageFace, SelectCameraDialog.Se
     //单选模式剪裁成功回调
     @Subscribe
     public void getCutCameraResult(CutCameraResult cutCameraResult) {
-        cameraSdkParameterInfo.getImage_list().clear();
-        cameraSdkParameterInfo.getImage_list().add(cutCameraResult.getPath());
-        LuBanSDK.getInstance().compressImage(activity, cameraSdkParameterInfo.getImage_list());
+        cameraSdkParameterInfo.getImageList().clear();
+        cameraSdkParameterInfo.getImageList().add(cutCameraResult.getPath());
+        LuBanSDK.getInstance().compressImage(activity, cameraSdkParameterInfo.getImageList());
         LuBanSDK.getInstance().setLuBanImageFace(this);
     }
 
@@ -147,7 +147,7 @@ public class PyxCamera implements LuBanSDK.LuBanImageFace, SelectCameraDialog.Se
     private ArrayList<String> getImageList(Bundle bundle) {
         if (bundle != null) {
             cameraSdkParameterInfo = (CameraSdkParameterInfo) bundle.getSerializable(EXTRA_PARAMETER);
-            ArrayList<String> list = cameraSdkParameterInfo.getImage_list();
+            ArrayList<String> list = cameraSdkParameterInfo.getImageList();
             return list;
         } else {
             return null;

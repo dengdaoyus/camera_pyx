@@ -37,6 +37,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.muzhi.camerasdk.R;
 import com.muzhi.camerasdk.adapter.FolderAdapter;
 import com.muzhi.camerasdk.adapter.ImageGridAdapter;
@@ -45,7 +46,6 @@ import com.muzhi.camerasdk.model.FolderInfo;
 import com.muzhi.camerasdk.model.ImageInfo;
 import com.muzhi.camerasdk.utils.FileUtils;
 import com.muzhi.camerasdk.utils.TimeUtils;
-import com.squareup.picasso.Picasso;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -95,7 +95,7 @@ public class PhotoPickActivityCamera extends CameraBaseActivity {
         Intent intent = getIntent();
         try {
             mCameraSdkParameterInfo = (CameraSdkParameterInfo) intent.getSerializableExtra(CameraSdkParameterInfo.EXTRA_PARAMETER);
-            resultList = mCameraSdkParameterInfo.getImage_list();
+            resultList = mCameraSdkParameterInfo.getImageList();
         } catch (Exception e) {
         }
 
@@ -115,13 +115,13 @@ public class PhotoPickActivityCamera extends CameraBaseActivity {
         selectedImageLayout = (LinearLayout) findViewById(R.id.selected_image_layout);
         scrollview = (HorizontalScrollView) findViewById(R.id.scrollview);
 
-        button_complate.setText("完成(0/" + mCameraSdkParameterInfo.getMax_image() + ")");
+        button_complate.setText("完成(0/" + mCameraSdkParameterInfo.getMaxImage() + ")");
 
-        mImageAdapter = new ImageGridAdapter(mContext, mCameraSdkParameterInfo.isShow_camera(), mCameraSdkParameterInfo.isSingle_mode());
+        mImageAdapter = new ImageGridAdapter(mContext, mCameraSdkParameterInfo.isShowCamera(), mCameraSdkParameterInfo.isSingleMode());
         mGridView.setAdapter(mImageAdapter);
         mFolderAdapter = new FolderAdapter(mContext);
 
-        if (mCameraSdkParameterInfo.isSingle_mode()) {
+        if (mCameraSdkParameterInfo.isSingleMode()) {
             camera_footer.setVisibility(View.GONE);
         }
     }
@@ -157,14 +157,6 @@ public class PhotoPickActivityCamera extends CameraBaseActivity {
         mGridView.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView absListView, int state) {
-
-                final Picasso picasso = Picasso.with(mContext);
-                if (state == SCROLL_STATE_IDLE || state == SCROLL_STATE_TOUCH_SCROLL) {
-                    picasso.resumeTag(mContext);
-                } else {
-                    picasso.pauseTag(mContext);
-                }
-
                 if (state == SCROLL_STATE_IDLE) {
                     // 停止滑动，日期指示器消失
                     mTimeLineText.setVisibility(View.GONE);
@@ -209,7 +201,7 @@ public class PhotoPickActivityCamera extends CameraBaseActivity {
 
                 if (mImageAdapter.isShowCamera()) {
                     if (i == 0) {
-                        if (mCameraSdkParameterInfo.getMax_image() == resultList.size()) {
+                        if (mCameraSdkParameterInfo.getMaxImage() == resultList.size()) {
                             Toast.makeText(mContext, R.string.camerasdk_msg_amount_limit, Toast.LENGTH_SHORT).show();
                         } else {
                             showCameraAction();
@@ -260,7 +252,7 @@ public class PhotoPickActivityCamera extends CameraBaseActivity {
                     values.put(MediaStore.Images.Media.SIZE, mTmpFile.length());
                     getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
 
-                    if (mCameraSdkParameterInfo.isSingle_mode()) {
+                    if (mCameraSdkParameterInfo.isSingleMode()) {
                         resultList.clear();
                         resultList.add(mTmpFile.getPath());
                         selectComplate();
@@ -285,13 +277,13 @@ public class PhotoPickActivityCamera extends CameraBaseActivity {
     private void selectImageFromGrid(ImageInfo imageInfo) {
         if (imageInfo != null) {
             // 多选模式
-            if (!mCameraSdkParameterInfo.isSingle_mode()) {
+            if (!mCameraSdkParameterInfo.isSingleMode()) {
                 if (resultList.contains(imageInfo.path)) {
                     resultList.remove(imageInfo.path);
                     remoreImagePreview(imageInfo.path);
                 } else {
                     // 判断选择数量问题
-                    if (mCameraSdkParameterInfo.getMax_image() == resultList.size()) {
+                    if (mCameraSdkParameterInfo.getMaxImage() == resultList.size()) {
                         Toast.makeText(mContext, R.string.camerasdk_msg_amount_limit, Toast.LENGTH_SHORT).show();
                         return;
                     }
@@ -399,10 +391,9 @@ public class PhotoPickActivityCamera extends CameraBaseActivity {
 
     //预览选择的图片
     private void addImagePreview(final String path) {
-        int mItemSize = 90;
         ImageView imageView = (ImageView) LayoutInflater.from(PhotoPickActivityCamera.this).inflate(R.layout.camerasdk_list_item_image_view, selectedImageLayout, false);
         selectedImageLayout.addView(imageView);
-        button_complate.setText("完成(" + resultList.size() + "/" + mCameraSdkParameterInfo.getMax_image() + ")");
+        button_complate.setText("完成(" + resultList.size() + "/" + mCameraSdkParameterInfo.getMaxImage() + ")");
 
         imageView.postDelayed(new Runnable() {
             @Override
@@ -417,10 +408,10 @@ public class PhotoPickActivityCamera extends CameraBaseActivity {
 
         hashMap.put(path, imageView);
         File imageFile = new File(path);
-        Picasso.with(mContext)
+        Glide.with(mContext)
                 .load(imageFile)
+                .override(90, 90)
                 .error(R.drawable.camerasdk_pic_loading)
-                .resize(mItemSize, mItemSize)
                 .centerCrop()
                 .into(imageView);
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -439,7 +430,7 @@ public class PhotoPickActivityCamera extends CameraBaseActivity {
         if (hashMap.containsKey(path)) {
             selectedImageLayout.removeView(hashMap.get(path));
             hashMap.remove(path);
-            button_complate.setText("完成(" + resultList.size() + "/" + mCameraSdkParameterInfo.getMax_image() + ")");
+            button_complate.setText("完成(" + resultList.size() + "/" + mCameraSdkParameterInfo.getMaxImage() + ")");
             return true;
         } else {
             return false;
@@ -490,7 +481,7 @@ public class PhotoPickActivityCamera extends CameraBaseActivity {
                         if (index == 0) {
                             getSupportLoaderManager().restartLoader(LOADER_ALL, null, mLoaderCallback);
                             mCategoryText.setText(R.string.camerasdk_album_all);
-                            mImageAdapter.setShowCamera(mCameraSdkParameterInfo.isShow_camera());
+                            mImageAdapter.setShowCamera(mCameraSdkParameterInfo.isShowCamera());
                         } else {
                             FolderInfo folderInfo = mFolderAdapter.getItem(index);
                             if (null != folderInfo) {
@@ -519,16 +510,16 @@ public class PhotoPickActivityCamera extends CameraBaseActivity {
     //选择完成实现跳转
     private void selectComplate() {
 
-        mCameraSdkParameterInfo.setImage_list(resultList);
+        mCameraSdkParameterInfo.setImageList(resultList);
         Bundle b = new Bundle();
         b.putSerializable(CameraSdkParameterInfo.EXTRA_PARAMETER, mCameraSdkParameterInfo);
 
         Intent intent = new Intent();
         intent.putExtras(b);
 
-        if (mCameraSdkParameterInfo.isSingle_mode()) {
+        if (mCameraSdkParameterInfo.isSingleMode()) {
             //单选模式
-            if (mCameraSdkParameterInfo.isCroper_image()) {
+            if (mCameraSdkParameterInfo.isCutoutImage()) {
                 //跳转到图片裁剪
                 intent = new Intent(this, CutActivityCamera.class);
                 intent.putExtras(b);
@@ -551,7 +542,7 @@ public class PhotoPickActivityCamera extends CameraBaseActivity {
         list.add(path);
 
         Intent intent = new Intent();
-        mCameraSdkParameterInfo.setImage_list(list);
+        mCameraSdkParameterInfo.setImageList(list);
         Bundle b = new Bundle();
         b.putSerializable(CameraSdkParameterInfo.EXTRA_PARAMETER, mCameraSdkParameterInfo);
         intent.putExtras(b);
