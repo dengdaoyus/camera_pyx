@@ -57,6 +57,9 @@ public class PhotoPickActivityCamera extends CameraBaseActivity {
 
     public static PhotoPickActivityCamera instance = null;
 
+    private RelativeLayout titleLayout;
+    private TextView cancelBtn;
+
     private CameraSdkParameterInfo mCameraSdkParameterInfo = new CameraSdkParameterInfo();
 
     private ArrayList<String> resultList = new ArrayList<String>();// 结果数据
@@ -103,7 +106,9 @@ public class PhotoPickActivityCamera extends CameraBaseActivity {
 
     private void initViews() {
         showLeftIcon();
+
         mCategoryText = (TextView) findViewById(R.id.camerasdk_actionbar_title);
+
         Drawable drawable = getResources().getDrawable(R.drawable.message_popover_arrow);
         drawable.setBounds(10, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
         mCategoryText.setCompoundDrawables(null, null, drawable, null);
@@ -114,7 +119,7 @@ public class PhotoPickActivityCamera extends CameraBaseActivity {
         camera_footer = (RelativeLayout) findViewById(R.id.camera_footer);
         selectedImageLayout = (LinearLayout) findViewById(R.id.selected_image_layout);
         scrollview = (HorizontalScrollView) findViewById(R.id.scrollview);
-
+        cancelBtn = (TextView) findViewById(R.id.camerasdk_btn_back);
         button_complate.setText("完成(0/" + mCameraSdkParameterInfo.getMaxImage() + ")");
 
         mImageAdapter = new ImageGridAdapter(mContext, mCameraSdkParameterInfo.isShowCamera(), mCameraSdkParameterInfo.isSingleMode());
@@ -124,6 +129,48 @@ public class PhotoPickActivityCamera extends CameraBaseActivity {
         if (mCameraSdkParameterInfo.isSingleMode()) {
             camera_footer.setVisibility(View.GONE);
         }
+        setUIViewLayout();
+    }
+
+    private void setUIViewLayout() {
+
+        if (mCameraSdkParameterInfo.getTitleColor() != 0) {
+            titleLayout = (RelativeLayout) findViewById(R.id.layout_actionbar_root);
+            titleLayout.setBackgroundResource(mCameraSdkParameterInfo.getTitleColor());
+        }
+
+        if (mCameraSdkParameterInfo.getTitleName() != null) {
+            mCategoryText.setText(mCameraSdkParameterInfo.getTitleName());
+        }
+
+        if (mCameraSdkParameterInfo.getTextSize() != 0) {
+            mCategoryText.setTextSize(mCameraSdkParameterInfo.getTextSize());
+        }
+
+        if (mCameraSdkParameterInfo.getCompleteColor() != 0) {
+            button_complate.setBackgroundColor(mCameraSdkParameterInfo.getCompleteColor());
+        }
+
+        if (mCameraSdkParameterInfo.getCompleteText() != null) {
+            button_complate.setText(mCameraSdkParameterInfo.getCompleteText());
+        }
+
+        if (mCameraSdkParameterInfo.getCompleteTextSize() != 0) {
+            button_complate.setTextSize(mCameraSdkParameterInfo.getCompleteTextSize());
+        }
+
+        if (mCameraSdkParameterInfo.getCancelColor() != 0) {
+            cancelBtn.setTextColor(mCameraSdkParameterInfo.getCancelColor());
+        }
+
+        if (mCameraSdkParameterInfo.getCompleteText() != null) {
+            cancelBtn.setText(mCameraSdkParameterInfo.getCancelText());
+        }
+
+        if (mCameraSdkParameterInfo.getCancelTextSize() != 0) {
+            cancelBtn.setTextSize(mCameraSdkParameterInfo.getCancelTextSize());
+        }
+
     }
 
     //设置预览图

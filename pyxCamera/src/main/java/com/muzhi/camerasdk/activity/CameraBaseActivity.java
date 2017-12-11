@@ -67,7 +67,6 @@ public abstract class CameraBaseActivity extends FragmentActivity{
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
 				finish();
 			}
 		});

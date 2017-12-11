@@ -16,9 +16,6 @@
 
     <application android:allowBackup="true">
 
-        <activity
-            android:name=".activity.CameraActivityCamera"
-            android:screenOrientation="portrait"></activity>
 
         <activity
             android:name=".activity.PhotoPickActivityCamera"

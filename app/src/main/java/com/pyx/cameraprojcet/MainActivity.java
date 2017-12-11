@@ -35,9 +35,7 @@ public class MainActivity extends AppCompatActivity implements PyxCamera.CameraI
     //一、实例化对象设置info对象设置SDK参数及UI
     private void initCamera() {
         info = new CameraSdkParameterInfo();
-        //设置单选模式
         info.setSingleMode(true);
-        //打开图片剪裁
         info.setCutoutImage(true);
         pyxCamera = new PyxCamera(this, info, this);
     }
@@ -72,8 +70,8 @@ public class MainActivity extends AppCompatActivity implements PyxCamera.CameraI
 
 
     @Override
-    public void returnImageList(ArrayList<String> list, String oneImage) {
-        Glide.with(this).load(oneImage).into(imageView);
+    public void returnImageList(ArrayList<String> list) {
+        Glide.with(this).load(list.get(0)).centerCrop().into(imageView);
     }
 
     @Override

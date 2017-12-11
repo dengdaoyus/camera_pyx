@@ -44,7 +44,9 @@ public class PyxCamera implements LuBanSDK.LuBanImageFace, SelectCameraDialog.Se
     }
 
     public void openCameraSdk() {
-        if (cameraSdkParameterInfo.isSingleMode() && cameraSdkParameterInfo.isCutoutImage()) {
+        if (cameraSdkParameterInfo.isSingleMode()
+                && cameraSdkParameterInfo.isCutoutImage()
+                && cameraSdkParameterInfo.isOpenDialog()) {
             selectCameraDialog.showDialog();
         } else {
             openPhotoPick();
@@ -61,7 +63,8 @@ public class PyxCamera implements LuBanSDK.LuBanImageFace, SelectCameraDialog.Se
         openPhotoPick();
     }
 
-    private void openPhotoPick() {
+    //打开相册
+    public void openPhotoPick() {
         Bundle b = new Bundle();
         b.putSerializable(EXTRA_PARAMETER, cameraSdkParameterInfo);
         Intent intent = new Intent(activity, PhotoPickActivityCamera.class);
@@ -70,14 +73,17 @@ public class PyxCamera implements LuBanSDK.LuBanImageFace, SelectCameraDialog.Se
     }
 
 
-    private void showCameraAction() {
-        Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (cameraIntent.resolveActivity(activity.getPackageManager()) != null) {
-            mTmpFile = FileUtils.createTmpFile(activity);
-            cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(mTmpFile));
-            activity.startActivityForResult(cameraIntent, TAKE_PICTURE_SINGLE_CAMERA);
-        } else {
-            Toast.makeText(activity, R.string.camerasdk_msg_no_camera, Toast.LENGTH_SHORT).show();
+    //系统拍照(单选、裁剪调用)
+    public void showCameraAction() {
+        if (cameraSdkParameterInfo.isSingleMode() && cameraSdkParameterInfo.isCutoutImage()) {
+            Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            if (cameraIntent.resolveActivity(activity.getPackageManager()) != null) {
+                mTmpFile = FileUtils.createTmpFile(activity);
+                cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(mTmpFile));
+                activity.startActivityForResult(cameraIntent, TAKE_PICTURE_SINGLE_CAMERA);
+            } else {
+                Toast.makeText(activity, R.string.camerasdk_msg_no_camera, Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
@@ -166,7 +172,7 @@ public class PyxCamera implements LuBanSDK.LuBanImageFace, SelectCameraDialog.Se
 
     @Override
     public void returnImageList(ArrayList<String> file) {
-        cameraImageCallBack.returnImageList(file, file.get(0));
+        cameraImageCallBack.returnImageList(file);
     }
 
     @Override
@@ -181,7 +187,7 @@ public class PyxCamera implements LuBanSDK.LuBanImageFace, SelectCameraDialog.Se
 
 
     public interface CameraImageCallBack {
-        void returnImageList(ArrayList<String> list, String oneImage);
+        void returnImageList(ArrayList<String> list);
 
         void onImageReturnError(String error);
 

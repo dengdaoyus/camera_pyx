@@ -43,7 +43,7 @@ public class SelectCameraDialog extends Dialog {
     private void initDialogWindow() {
         Window window = getWindow();
         assert window != null;
-        window.setGravity(Gravity.CENTER);
+        window.setGravity(Gravity.BOTTOM);
         WindowManager.LayoutParams lp = window.getAttributes();
         lp.width = WindowManager.LayoutParams.MATCH_PARENT;
         lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
