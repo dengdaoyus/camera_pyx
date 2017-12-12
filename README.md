@@ -4,9 +4,10 @@
 ![image](https://github.com/Mypyx/camera_pyx/raw/master/Gif/device-2017-12-11-151640_0-400.gif)   ![image](https://github.com/Mypyx/camera_pyx/raw/master/Gif/device-2017-12-11-151038_0-223.gif)   
 
 
-```java
 
 ## Download
+```groovy
+  compile 'com.github.Mypyx:camera_pyx:pyx_1.0.2'
 
 	allprojects {
     		repositories {
@@ -14,13 +15,9 @@
        		    maven { url "https://jitpack.io" }
                  }
               }
-	      
-	      
-		 //添加依赖
-	      compile 'com.github.Mypyx:camera_pyx:pyx_1.0.2'
-	      
+	     
 
-====================================================Parameter======================================================
+```java
 
     //最大图片选择数，int类型，默认9
     private int maxImage = 9;
