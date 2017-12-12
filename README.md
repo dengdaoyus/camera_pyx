@@ -6,18 +6,9 @@
 
 
 ## Download
-```groovy
+
   compile 'com.github.Mypyx:camera_pyx:pyx_1.0.2'
 
-	allprojects {
-    		repositories {
-     		   jcenter()
-       		    maven { url "https://jitpack.io" }
-                 }
-              }
-	     
-
-```java
 
     //最大图片选择数，int类型，默认9
     private int maxImage = 9;
